@@ -19,6 +19,7 @@ EMAIL_USE_TLS = config('EMAIL_USE_TLS', cast=bool)
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 FEEDBACK_MAIL_TO = config('FEEDBACK_MAIL_TO').split(',')
+domain = config('DOMAIN', default='localhost:8000')
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 

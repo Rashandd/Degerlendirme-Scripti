@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.contrib import admin
 from .models import Location, Question, AnswerOption, Feedback
 import qrcode
@@ -8,8 +9,7 @@ from io import BytesIO
 def generate_qr_code(modeladmin, request, queryset):
     if queryset.count() == 1:
         location = queryset.first()
-        domain = "example.com"
-        url = f"https://{domain}/{location.id}/"
+        url = f"https://{settings.domain}/{location.id}/"
         img = qrcode.make(url)
 
         buffer = BytesIO()
