@@ -1,0 +1,2 @@
+# Degerlendirme Scripti
+ 
